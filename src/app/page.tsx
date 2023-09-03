@@ -3,7 +3,7 @@ import Form from "@/components/ui/Form";
 import TodoList from "@/components/ui/TodoList";
 import { todo } from "node:test";
 import React, { useState, useEffect } from "react";
-export default () => {
+const Home = () => {
   //States
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
@@ -33,7 +33,7 @@ export default () => {
     <div className="flex flex-col min-h-screen justify-around mx-auto bg-slate-300 ">
       <div className="">
         <header className=" flex justify-center font-bold text-3xl py-10 lg:py-12 lg:text-[55px]">
-          Hassan's Todo List
+          Todo List
         </header>
         <Form
           todos={todos}
@@ -58,3 +58,4 @@ export default () => {
     </div>
   );
 };
+export default Home;
