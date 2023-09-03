@@ -1,6 +1,7 @@
 "use client";
 import Form from "@/components/ui/Form";
 import TodoList from "@/components/ui/TodoList";
+import { todo } from "node:test";
 import React, { useState, useEffect } from "react";
 export default () => {
   //States
@@ -17,15 +18,16 @@ export default () => {
   const filterHandler = () => {
     switch (status) {
       case "completed":
-        setFilteredTodos(todos.filter((todo) => todo.completed === true));
+        setFilteredTodos(todos.filter((todo) => todo["completed"] === true));
         break;
       case "uncompleted":
-        setFilteredTodos(todos.filter((todo) => todo.completed === false));
+        setFilteredTodos(todos.filter((todo) => todo["completed"] === false));
         break;
       default:
         setFilteredTodos(todos);
         break;
     }
+    console.log(todos);
   };
   return (
     <div className="flex flex-col min-h-screen justify-around mx-auto bg-slate-300 ">

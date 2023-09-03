@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { FaPlusSquare } from "react-icons/fa";
-const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
+const Form = ({ inputText, setInputText, todos, setTodos, setStatus }: any) => {
   const inputTextHandler = (e: any) => {
     setInputText(e.target.value);
   };
-  const submitHandler = (e) => {
+  const submitHandler = (e: any) => {
     e.preventDefault();
     setTodos([
       ...todos,
@@ -12,7 +12,7 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
     ]);
     setInputText("");
   };
-  const statusHandler = (e) => {
+  const statusHandler = (e: any) => {
     setStatus(e.target.value);
   };
 

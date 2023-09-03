@@ -1,12 +1,12 @@
 import React from "react";
 import { FaTrash, FaCheck } from "react-icons/fa";
-const Todo = ({ text, todo, setTodos, todos }) => {
+const Todo = ({ text, todo, setTodos, todos }: any) => {
   const deleteHandler = () => {
-    setTodos(todos.filter((el) => el.id !== todo.id));
+    setTodos(todos.filter((el: any) => el.id !== todo.id));
   };
   const completeHandler = () => {
     setTodos(
-      todos.map((item) => {
+      todos.map((item: any) => {
         if (item.id === todo.id) {
           return {
             ...item,
